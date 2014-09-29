@@ -1,0 +1,27 @@
+<h1>Listing urldata</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Url</th>
+      <th>Text</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @urldata.each do |urldatum| %>
+      <tr>
+        <td><%= urldatum.url %></td>
+        <td><%= urldatum.text %></td>
+        <td><%= link_to 'Show', urldatum %></td>
+        <td><%= link_to 'Edit', edit_urldatum_path(urldatum) %></td>
+        <td><%= link_to 'Destroy', urldatum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Urldatum', new_urldatum_path %>

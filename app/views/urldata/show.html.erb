@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @urldatum.url %>
+</p>
+
+<p>
+  <strong>Text:</strong>
+  <%= @urldatum.text %>
+</p>
+
+<%= link_to 'Edit', edit_urldatum_path(@urldatum) %> |
+<%= link_to 'Back', urldata_path %>
